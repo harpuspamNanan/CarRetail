@@ -50,12 +50,12 @@
 					android:layout_height="wrap_content"
 					android:checked="true"
 					android:text="Cash"
-					android:id="@+id/radioButton1" />
+					android:id="@+id/cashRadioGrp" />
 				<RadioButton
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
 					android:text="Finance"
-					android:id="@+id/radioButton2" />			
+					android:id="@+id/financeRadioGrp" />			
 			</RadioGroup>
 		
 		</TableRow>
@@ -65,6 +65,11 @@
 				android:text="Button"
 				android:layout_column="0"
 				android:id="@+id/totalBtn" />
+			<TextView
+				android:text=""
+				android:textAppearance="?android:attr/textAppearanceMedium"
+				android:layout_column="0"
+				android:id="@+id/totalTv" />
 			
 		</TableRow>
 	</TableLayout>
