@@ -4,6 +4,70 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+	<TableLayout
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:id="@+id/tableLayout1">
+		<TableRow
+			android:id="@+id/tableRow1">
+			<TextView
+				android:text="Car :"
+				android:textAppearance="?android:attr/textAppearanceMedium"
+				android:layout_column="0"
+				android:id="@+id/carTv" />
+			<EditText
+				android:layout_column="1"
+				android:id="@+id/carEt" />
+		</TableRow>
+		<TableRow
+			android:id="@+id/tableRow2">
+			<TextView
+				android:text="Price :"
+				android:textAppearance="?android:attr/textAppearanceMedium"
+				android:layout_column="0"
+				android:id="@+id/priceTv" />
+			<EditText
+				android:inputType="numberDecimal"
+				android:layout_column="1"
+				android:id="@+id/priceEt" />
+		</TableRow>
+		<TableRow
+			android:id="@+id/tableRow3">
+			<TextView
+				android:text="Purchase :"
+				android:textAppearance="?android:attr/textAppearanceMedium"
+				android:layout_column="0"
+				android:id="@+id/purchaseTv" />
+			<RadioGroup
+				android:minWidth="25px"
+				android:minHeight="25px"
+				android:layout_column="1"
+				android:id="@+id/purchaseRadioGrp">
+				<RadioButton
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:checked="true"
+					android:text="Cash"
+					android:id="@+id/radioButton1" />
+				<RadioButton
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Finance"
+					android:id="@+id/radioButton2" />			
+			</RadioGroup>
+		
+		</TableRow>
+		<TableRow
+			android:id="@+id/tableRow2">
+			<Button
+				android:text="Button"
+				android:layout_column="0"
+				android:id="@+id/totalBtn" />
+			
+		</TableRow>
+	</TableLayout>
 
 
 </android.support.design.widget.CoordinatorLayout>
