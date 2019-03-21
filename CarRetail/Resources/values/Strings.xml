@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">CarRetail</string>
     <string name="action_settings">Settings</string>
+  <string-array name="CarArray">
+    <item>Mercedes</item>
+    <item>BMW</item>
+    <item>Toyota</item>
+    <item>Honda</item>
+    <item>Nissan</item>
+    <item>Ford</item>  
+  </string-array>
 </resources>
