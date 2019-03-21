@@ -16,7 +16,7 @@ namespace CarRetail
         RadioButton cashRdBtn, financeRdBtn;
         Button btnTotal;
         TextView tvTotalOutput;
-        string[] carNames = { "Mercedec", "BMW", "Toyota", "Honda", "Nissan", "Ford" };
+        string[] carNames = { "Mercedes", "BMW", "Toyota", "Honda", "Nissan", "Ford" };
         double[] carPrice = { 120000, 90000, 70000, 67000, 55000, 73000 };
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -59,7 +59,7 @@ namespace CarRetail
             {
                 string name = carModelEt.Text;
                 for (int i = 0; i < carNames.Length; i++)
-                    if (name == carNames[i])
+                    if (name.ToLower() == carNames[i].ToLower())
                         return i;
                 return -1;
             }
