@@ -6,7 +6,6 @@ using Android.Support.Design.Widget;
 using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
-
 namespace CarRetail
 {
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
@@ -23,6 +22,13 @@ namespace CarRetail
             SetContentView(Resource.Layout.activity_main);
 
             carNames = (Spinner)FindViewById(Resource.Id.fidgetSpinner);
+
+            var carNamesAdapter = ArrayAdapter.CreateFromResource(this, Resource.Array.CarArray, Android.Resource.Layout.SimpleSpinnerItem);
+            carNames.Adapter = carNamesAdapter;
+            carNames.ItemSelected += delegate
+            {
+
+            };
         }
 
 
