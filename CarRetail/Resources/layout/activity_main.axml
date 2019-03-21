@@ -30,10 +30,11 @@
 				android:textAppearance="?android:attr/textAppearanceMedium"
 				android:layout_column="0"
 				android:id="@+id/priceTv" />
-			<EditText
-				android:inputType="numberDecimal"
-				android:layout_column="1"
-				android:id="@+id/priceEt" />
+			<TextView
+				android:text=""
+				android:textAppearance="?android:attr/textAppearanceMedium"
+				android:layout_column="0"
+				android:id="@+id/priceOutputTv" />
 		</TableRow>
 		<TableRow
 			android:id="@+id/tableRow3">
@@ -71,6 +72,9 @@
 				android:id="@+id/totalTv" />
 			
 		</TableRow>
+		<ImageView
+			android:src="@android:drawable/ic_menu_gallery"
+			android:id="@+id/carImageView" />
 	</TableLayout>
 
 

@@ -13,8 +13,11 @@ namespace CarRetail
     {
        
         Spinner carNames;
-        
-        double[] carPrice = { 120000, 90000, 70000, 67000, 55000, 73000 };
+        TextView carPriceTv;
+        ImageView carImages;
+
+
+        double[] carPriceArray = { 120000, 90000, 70000, 67000, 55000, 73000 };
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -22,11 +25,19 @@ namespace CarRetail
             SetContentView(Resource.Layout.activity_main);
 
             carNames = (Spinner)FindViewById(Resource.Id.fidgetSpinner);
+            carPriceTv = (TextView)FindViewById(Resource.Id.priceOutputTv);
+            carImages = (ImageView)FindViewById(Resource.Id.carImageView);
 
             var carNamesAdapter = ArrayAdapter.CreateFromResource(this, Resource.Array.CarArray, Android.Resource.Layout.SimpleSpinnerItem);
             carNames.Adapter = carNamesAdapter;
+
             carNames.ItemSelected += delegate
             {
+                long i = carNames.SelectedItemId;
+                carPriceTv.Text = carPriceArray[i].ToString();
+                Toast.MakeText(this, "The Selected Car is : " + carNames.SelectedItem, ToastLength.Long).Show();
+                string imgName = "car" + i;
+                int imgId = this.Resources.
 
             };
         }
