@@ -74,6 +74,7 @@
 		</TableRow>
 		<ImageView
 			android:src="@android:drawable/ic_menu_gallery"
+			
 			android:id="@+id/carImageView" />
 	</TableLayout>
 

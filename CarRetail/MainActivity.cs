@@ -36,8 +36,9 @@ namespace CarRetail
                 long i = carNames.SelectedItemId;
                 carPriceTv.Text = carPriceArray[i].ToString();
                 Toast.MakeText(this, "The Selected Car is : " + carNames.SelectedItem, ToastLength.Long).Show();
-                string imgName = "car" + i;
-                int imgId = this.Resources.
+                string imgName = "car0" + i;
+                int imgId = this.Resources.GetIdentifier(imgName, "mipmap", this.PackageName);
+                carImages.SetImageResource(imgId);
 
             };
         }
